@@ -1,16 +1,15 @@
 {
-  "name": "siteleaf-webpack",
+  "name": "webpack",
   "version": "1.0.0",
-  "description": "Siteleaf theming with webpack",
+  "description": "Webpack with hotloading modules, ES2015 and postcss support",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build": "NODE_ENV=production webpack -p --config ./webpack.production.config.js --progress --profile --colors"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SamMargalit/siteleaf-webpack.git"
+    "url": "https://github.com/SamMargalit/webpack.git"
   },
   "keywords": [
     "siteleaf",
@@ -19,19 +18,21 @@
   "author": "@sammargalit",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SamMargalit/siteleaf-webpack/issues"
+    "url": "https://github.com/SamMargalit/webpack/issues"
   },
-  "homepage": "https://github.com/SamMargalit/siteleaf-webpack",
+  "homepage": "https://github.com/SamMargalit/webpack",
   "devDependencies": {
     "autoprefixer": "^6.3.0",
     "babel-core": "^6.4.0",
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "express": "^4.13.3",
+    "postcss-loader": "^0.8.0",
     "precss": "^1.4.0",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.11",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
     "webpack-module-hot-accept": "^1.0.4"
-  }
+  },
 }
