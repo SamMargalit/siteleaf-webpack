@@ -26,7 +26,10 @@ module.exports = {
       loaders: ['babel?presets[]=es2015','webpack-module-hot-accept']
     }, {
       test: /\.css?$/,
-      loader: "style-loader!css-loader!postcss-loader"
+      loader: "style!css!postcss"
+    }, {
+      test: /\.(png|jpg)$/,
+      loader: 'url?limit=25000'
     }]
   },
   postcss: function () {
