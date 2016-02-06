@@ -1,6 +1,29 @@
 /* Edit me and see me hot reload */
 html {
-  body {
-    background: blue;
+}
+
+/* Some Defaults */
+body {
+  margin: 0;
+}
+
+a, button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  border: none;
+  &:focus {
+    outline: 0;
   }
+}
+
+select {
+  appearance: none;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
 }
