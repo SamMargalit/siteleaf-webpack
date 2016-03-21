@@ -24,7 +24,7 @@ module.exports = {
       exclude: /node_modules/,
       loaders: ['babel?presets[]=es2015','webpack-module-hot-accept']
     }, {
-      test: /\.css?$/,
+      test: /\.(css|scss)?$/,
       loader: "style!css!sass!postcss"
     }, {
       test: /\.(png|jpg)$/,
