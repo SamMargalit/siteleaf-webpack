@@ -10,19 +10,19 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new ExtractTextPlugin('index.css')
+    new ExtractTextPlugin('styles.css')
   ],
   module: {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['es2015']
-      }
+      loaders: ['babel?presets[]=es2015']
     }, {
-      test: /\.css?$/,
-      loader: "style!css!sass!postcss"
+      test: /\.(css|scss)?$/,
+      loader: ExtractTextPlugin.extract("style", "!css!sass!postcss")
+    }, {
+      test: /\.(png|jpg)$/,
+      loader: 'url?limit=25000'
     }]
   },
   postcss: function () {
