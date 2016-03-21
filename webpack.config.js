@@ -10,6 +10,7 @@ module.exports = {
     './index'
   ],
   output: {
+    path: path.join(__dirname),
     filename: 'main.js',
     publicPath: '/assets/'
   },

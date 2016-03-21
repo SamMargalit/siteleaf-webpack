@@ -7,7 +7,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   entry: './index.js',
   output: {
-    filename: 'dist/main-[hash].js'
+    filename: 'main-[hash].js',
+    path: path.join(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -16,7 +17,7 @@ module.exports = {
       filename: 'index.html'
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new ExtractTextPlugin('dist/styles-[hash].css')
+    new ExtractTextPlugin('styles-[hash].css')
   ],
   module: {
     loaders: [{
