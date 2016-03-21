@@ -1,7 +1,6 @@
-var path = require('path');
-var autoprefixer = require('autoprefixer');
-var precss = require('precss');
-var webpack = require('webpack');
+var path = require('path')
+var autoprefixer = require('autoprefixer')
+var webpack = require('webpack')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -26,13 +25,13 @@ module.exports = {
       loaders: ['babel?presets[]=es2015','webpack-module-hot-accept']
     }, {
       test: /\.css?$/,
-      loader: "style!css!postcss"
+      loader: "style!css!sass!postcss"
     }, {
       test: /\.(png|jpg)$/,
       loader: 'url?limit=25000'
     }]
   },
   postcss: function () {
-    return [autoprefixer, precss]
+    return [autoprefixer]
   }
-};
+}

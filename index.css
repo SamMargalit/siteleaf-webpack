@@ -5,6 +5,7 @@ html {
 /* Some Defaults */
 body {
   margin: 0;
+  background-color: red;
 }
 
 a, button, input, textarea, select {
