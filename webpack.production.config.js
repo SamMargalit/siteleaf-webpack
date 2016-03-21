@@ -6,11 +6,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   entry: './index.js',
   output: {
-    filename: 'main.js'
+    filename: 'dist/main-[hash].js'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('dist/styles-[hash].css')
   ],
   module: {
     loaders: [{
