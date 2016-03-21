@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 var autoprefixer = require('autoprefixer')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
@@ -9,6 +10,11 @@ module.exports = {
     filename: 'dist/main-[hash].js'
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.tpl.html',
+      inject: 'body',
+      filename: 'index.html'
+    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new ExtractTextPlugin('dist/styles-[hash].css')
   ],

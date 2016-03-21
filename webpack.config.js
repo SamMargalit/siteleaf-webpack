@@ -1,5 +1,6 @@
 var path = require('path')
 var autoprefixer = require('autoprefixer')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var webpack = require('webpack')
 
 module.exports = {
@@ -13,6 +14,11 @@ module.exports = {
     publicPath: '/assets/'
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.tpl.html',
+      inject: 'body',
+      filename: 'index.html'
+    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
