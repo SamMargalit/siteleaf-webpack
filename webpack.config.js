@@ -28,7 +28,10 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loaders: ['babel?presets[]=es2015','webpack-module-hot-accept']
+      loader: 'babel',
+      query: {
+        "presets": ["react", "es2015", "stage-0", "react-hmre"]
+      }
     }, {
       test: /\.(css|scss)?$/,
       loader: "style!css!sass!postcss"
